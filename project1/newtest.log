@@ -1,0 +1,102 @@
++---> BUILDING newtest
+++ printing Superclasses ++
+--> Superclass common
+common: template = Debian-4.0.ext3
+printing network
+common: Network interfaces
+Interface eth0
+ address: dhcp
+++ printing Hosts ++
+--> Host newtest-loadbalancer-01-prod
+newtest-loadbalancer-01-prod: superclass = 'common'
+newtest-loadbalancer-01-prod: template = Debian-4.0.ext3
+printing network
+newtest-loadbalancer-01-prod: Network interfaces
+Interface eth0
+ address: dhcp
+--> Host newtest-mysql-01-prod
+newtest-mysql-01-prod: superclass = 'common'
+newtest-mysql-01-prod: template = Debian-4.0.ext3
+printing network
+newtest-mysql-01-prod: Network interfaces
+Interface eth0
+ address: dhcp
+Saving Config file: /opt/mln/projects/root/newtest/newtest.mln
+---> newtest-loadbalancer-01-prod
+openstack enabled
+Creating start/stop scripts for newtest-loadbalancer-01-prod on OpenStack
+OpenStack:  got flavor ID 2
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
+---> newtest-mysql-01-prod
+openstack enabled
+Creating start/stop scripts for newtest-mysql-01-prod on OpenStack
+OpenStack:  got flavor ID 2
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
++---> PROJECT newtest FINISHED 
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | scheduling                                         |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | bSS3EhpcsoYH                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-10T14:09:59Z                               |
+| flavor                               | m1.small (2)                                       |
+| hostId                               |                                                    |
+| id                                   | ba45f948-16a7-4669-be1e-94679bb5d2b0               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | newtest-loadbalancer-01-prod.newtest               |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-10T14:09:58Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | scheduling                                         |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | nkbXEiC28KTo                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-10T14:10:02Z                               |
+| flavor                               | m1.small (2)                                       |
+| hostId                               |                                                    |
+| id                                   | d890a88f-3baf-44be-a655-c96021014a18               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | newtest-mysql-01-prod.newtest                      |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-10T14:10:02Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
+This will execute the following _SIGN_ commands:
+puppet cert sign newtest-loadbalancer-01-prod.openstacklocal
+puppet cert sign newtest-mysql-01-prod.openstacklocal
+[mNotice: Signed certificate request for newtest-loadbalancer-01-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest newtest-loadbalancer-01-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/newtest-loadbalancer-01-prod.openstacklocal.pem'[0m
+[mNotice: Signed certificate request for newtest-mysql-01-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest newtest-mysql-01-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/newtest-mysql-01-prod.openstacklocal.pem'[0m

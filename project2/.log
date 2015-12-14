@@ -1,0 +1,15 @@
+This will execute the following _CLEAN_ commands:
+Stopping backup-test
+Stopping backup-test-virtual-desktop-04-prod.backup-test
+Stopping backup-test-virtual-desktop-03-prod.backup-test
+Stopping backup-test-virtual-desktop-02-prod.backup-test
+Stopping backup-test-virtual-desktop-01-prod.backup-test
+Stopping backup-test-storage-01-prod.backup-test
+Stopping backup-test-mongodb-01-prod.backup-test
+
+Are you sure you want to remove backup-test? (y/N)
+Removing /opt/mln/projects/root/backup-test
+OpenStack:  removing host backup-test-mongodb-01-prod.backup-test
+OpenStack:  removing host backup-test-virtual-desktop-01-prod.backup-test
+OpenStack:  removing host backup-test-virtual-desktop-02-prod.backup-test
+OpenStack:  removing host backup-test-storage-01-prod.backup-test

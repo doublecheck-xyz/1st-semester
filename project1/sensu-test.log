@@ -1,0 +1,102 @@
++---> BUILDING sensu-test
+++ printing Superclasses ++
+--> Superclass common
+common: template = Debian-4.0.ext3
+printing network
+common: Network interfaces
+Interface eth0
+ address: dhcp
+++ printing Hosts ++
+--> Host sensu-test-mysql-01-prod
+sensu-test-mysql-01-prod: superclass = 'common'
+sensu-test-mysql-01-prod: template = Debian-4.0.ext3
+printing network
+sensu-test-mysql-01-prod: Network interfaces
+Interface eth0
+ address: dhcp
+--> Host sensu-test-loadbalancer-01-prod
+sensu-test-loadbalancer-01-prod: superclass = 'common'
+sensu-test-loadbalancer-01-prod: template = Debian-4.0.ext3
+printing network
+sensu-test-loadbalancer-01-prod: Network interfaces
+Interface eth0
+ address: dhcp
+Saving Config file: /opt/mln/projects/root/sensu-test/sensu-test.mln
+---> sensu-test-mysql-01-prod
+openstack enabled
+Creating start/stop scripts for sensu-test-mysql-01-prod on OpenStack
+OpenStack:  got flavor ID 2
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
+---> sensu-test-loadbalancer-01-prod
+openstack enabled
+Creating start/stop scripts for sensu-test-loadbalancer-01-prod on OpenStack
+OpenStack:  got flavor ID 2
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
++---> PROJECT sensu-test FINISHED 
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | scheduling                                         |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | ibeMJ35zuAQf                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-04T11:22:32Z                               |
+| flavor                               | m1.small (2)                                       |
+| hostId                               |                                                    |
+| id                                   | 7a2d1c13-d218-476e-af3c-f9da7c2c6f9f               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | sensu-test-loadbalancer-01-prod.sensu-test         |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-04T11:22:32Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | scheduling                                         |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | iAqEKx5CA3bJ                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-04T11:22:36Z                               |
+| flavor                               | m1.small (2)                                       |
+| hostId                               |                                                    |
+| id                                   | 0ee11a84-d121-48e3-9893-8f5fbb28bb9b               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | sensu-test-mysql-01-prod.sensu-test                |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-04T11:22:36Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
+This will execute the following _SIGN_ commands:
+puppet cert sign sensu-test-loadbalancer-01-prod.openstacklocal
+puppet cert sign sensu-test-mysql-01-prod.openstacklocal
+[mNotice: Signed certificate request for sensu-test-loadbalancer-01-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest sensu-test-loadbalancer-01-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/sensu-test-loadbalancer-01-prod.openstacklocal.pem'[0m
+[mNotice: Signed certificate request for sensu-test-mysql-01-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest sensu-test-mysql-01-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/sensu-test-mysql-01-prod.openstacklocal.pem'[0m

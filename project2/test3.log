@@ -1,0 +1,283 @@
++---> BUILDING test3
+++ printing Superclasses ++
+--> Superclass common
+common: template = Debian-4.0.ext3
+printing network
+common: Network interfaces
+Interface eth0
+ address: dhcp
+++ printing Hosts ++
+--> Host test3-mongodb-01-prod
+test3-mongodb-01-prod: superclass = 'common'
+test3-mongodb-01-prod: template = Debian-4.0.ext3
+printing network
+test3-mongodb-01-prod: Network interfaces
+Interface eth0
+ address: dhcp
+--> Host test3-virtual-desktop-04-prod
+test3-virtual-desktop-04-prod: superclass = 'common'
+test3-virtual-desktop-04-prod: template = Debian-4.0.ext3
+printing network
+test3-virtual-desktop-04-prod: Network interfaces
+Interface eth0
+ address: dhcp
+--> Host test3-virtual-desktop-02-prod
+test3-virtual-desktop-02-prod: superclass = 'common'
+test3-virtual-desktop-02-prod: template = Debian-4.0.ext3
+printing network
+test3-virtual-desktop-02-prod: Network interfaces
+Interface eth0
+ address: dhcp
+--> Host test3-storage-01-prod
+test3-storage-01-prod: superclass = 'common'
+test3-storage-01-prod: template = Debian-4.0.ext3
+printing network
+test3-storage-01-prod: Network interfaces
+Interface eth0
+ address: dhcp
+--> Host test3-virtual-desktop-03-prod
+test3-virtual-desktop-03-prod: superclass = 'common'
+test3-virtual-desktop-03-prod: template = Debian-4.0.ext3
+printing network
+test3-virtual-desktop-03-prod: Network interfaces
+Interface eth0
+ address: dhcp
+--> Host test3-virtual-desktop-01-prod
+test3-virtual-desktop-01-prod: superclass = 'common'
+test3-virtual-desktop-01-prod: template = Debian-4.0.ext3
+printing network
+test3-virtual-desktop-01-prod: Network interfaces
+Interface eth0
+ address: dhcp
+Saving Config file: /opt/mln/projects/root/test3/test3.mln
+---> test3-mongodb-01-prod
+openstack enabled
+Creating start/stop scripts for test3-mongodb-01-prod on OpenStack
+OpenStack:  got flavor ID 2
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
+---> test3-virtual-desktop-04-prod
+openstack enabled
+Creating start/stop scripts for test3-virtual-desktop-04-prod on OpenStack
+OpenStack:  got flavor ID 2
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
+---> test3-virtual-desktop-02-prod
+openstack enabled
+Creating start/stop scripts for test3-virtual-desktop-02-prod on OpenStack
+OpenStack:  got flavor ID 2
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
+---> test3-storage-01-prod
+openstack enabled
+Creating start/stop scripts for test3-storage-01-prod on OpenStack
+OpenStack:  got flavor ID 2
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
+---> test3-virtual-desktop-03-prod
+openstack enabled
+Creating start/stop scripts for test3-virtual-desktop-03-prod on OpenStack
+OpenStack:  got flavor ID 2
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
+---> test3-virtual-desktop-01-prod
+openstack enabled
+Creating start/stop scripts for test3-virtual-desktop-01-prod on OpenStack
+OpenStack:  got flavor ID 2
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
++---> PROJECT test3 FINISHED 
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | scheduling                                         |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | Jpg32gokbeYd                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-16T13:45:59Z                               |
+| flavor                               | m1.small (2)                                       |
+| hostId                               |                                                    |
+| id                                   | 1d397897-8228-4303-b851-30715eef8466               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | test3-mongodb-01-prod.test3                        |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-16T13:45:58Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | scheduling                                         |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | JkXPX9gXwnKk                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-16T13:46:02Z                               |
+| flavor                               | m1.small (2)                                       |
+| hostId                               |                                                    |
+| id                                   | cb7fd28a-beb2-48b6-b8a5-ab39ebc601a7               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | test3-storage-01-prod.test3                        |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-16T13:46:02Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | scheduling                                         |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | 6GLw5auD7W2Q                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-16T13:46:06Z                               |
+| flavor                               | m1.small (2)                                       |
+| hostId                               |                                                    |
+| id                                   | 72bcef6c-58f7-43c5-b0be-a45f23d73474               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | test3-virtual-desktop-01-prod.test3                |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-16T13:46:06Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | scheduling                                         |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | V7saCgcRaLE3                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-16T13:46:10Z                               |
+| flavor                               | m1.small (2)                                       |
+| hostId                               |                                                    |
+| id                                   | 366db2a1-a427-469a-b058-e291a02a2e4a               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | test3-virtual-desktop-02-prod.test3                |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-16T13:46:10Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | -                                                  |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | iLpK4hukWsC6                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-16T13:46:14Z                               |
+| flavor                               | m1.small (2)                                       |
+| hostId                               |                                                    |
+| id                                   | a12d8523-1e59-4461-8bd6-a2fa03d98c26               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | test3-virtual-desktop-03-prod.test3                |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-16T13:46:14Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | scheduling                                         |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | r4bwQEntigg7                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-16T13:46:18Z                               |
+| flavor                               | m1.small (2)                                       |
+| hostId                               |                                                    |
+| id                                   | bc6d30ad-6dec-4787-8b76-472691e8db5d               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | test3-virtual-desktop-04-prod.test3                |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-16T13:46:17Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
+This will execute the following _SIGN_ commands:
+puppet cert sign test3-mongodb-01-prod.openstacklocal
+puppet cert sign test3-storage-01-prod.openstacklocal
+puppet cert sign test3-virtual-desktop-01-prod.openstacklocal
+puppet cert sign test3-virtual-desktop-02-prod.openstacklocal
+puppet cert sign test3-virtual-desktop-03-prod.openstacklocal
+puppet cert sign test3-virtual-desktop-04-prod.openstacklocal
+[mNotice: Signed certificate request for test3-mongodb-01-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest test3-mongodb-01-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/test3-mongodb-01-prod.openstacklocal.pem'[0m
+[mNotice: Signed certificate request for test3-storage-01-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest test3-storage-01-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/test3-storage-01-prod.openstacklocal.pem'[0m
+[mNotice: Signed certificate request for test3-virtual-desktop-01-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest test3-virtual-desktop-01-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/test3-virtual-desktop-01-prod.openstacklocal.pem'[0m
+[mNotice: Signed certificate request for test3-virtual-desktop-02-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest test3-virtual-desktop-02-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/test3-virtual-desktop-02-prod.openstacklocal.pem'[0m
+[mNotice: Signed certificate request for test3-virtual-desktop-03-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest test3-virtual-desktop-03-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/test3-virtual-desktop-03-prod.openstacklocal.pem'[0m
+[mNotice: Signed certificate request for test3-virtual-desktop-04-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest test3-virtual-desktop-04-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/test3-virtual-desktop-04-prod.openstacklocal.pem'[0m
+Configuring backup of servers in the project

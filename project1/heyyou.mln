@@ -1,0 +1,30 @@
+global {
+        project heyyou
+}
+
+superclass common {
+        openstack {
+                image Ubuntu14.04
+                flavor m1.small
+                keypair master
+        user_data {
+
+            wget 10.1.0.27/puppet_install.sh
+            sudo sh puppet_install.sh
+            wget 10.1.0.27/puppet_agent.pp
+            sudo puppet apply puppet_agent.pp
+        }
+        }
+        network eth0 {
+                net nsa_master_net
+                address dhcp
+        }
+}
+
+host heyyou-loadbalancer-01-prod {
+    superclass common
+}
+host heyyou-mysql-01-prod {
+    superclass common
+}
+

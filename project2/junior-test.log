@@ -1,0 +1,148 @@
++---> BUILDING junior-test
+++ printing Superclasses ++
+--> Superclass common
+common: template = Debian-4.0.ext3
+printing network
+common: Network interfaces
+Interface eth0
+ address: dhcp
+++ printing Hosts ++
+--> Host junior-test-mongodb-01-prod
+junior-test-mongodb-01-prod: superclass = 'common'
+junior-test-mongodb-01-prod: template = Debian-4.0.ext3
+printing network
+junior-test-mongodb-01-prod: Network interfaces
+Interface eth0
+ address: dhcp
+--> Host junior-test-storage-01-prod
+junior-test-storage-01-prod: superclass = 'common'
+junior-test-storage-01-prod: template = Debian-4.0.ext3
+printing network
+junior-test-storage-01-prod: Network interfaces
+Interface eth0
+ address: dhcp
+--> Host junior-test-virtual-desktop-01-prod
+junior-test-virtual-desktop-01-prod: superclass = 'common'
+junior-test-virtual-desktop-01-prod: template = Debian-4.0.ext3
+printing network
+junior-test-virtual-desktop-01-prod: Network interfaces
+Interface eth0
+ address: dhcp
+Saving Config file: /opt/mln/projects/root/junior-test/junior-test.mln
+---> junior-test-mongodb-01-prod
+openstack enabled
+Creating start/stop scripts for junior-test-mongodb-01-prod on OpenStack
+OpenStack:  got flavor ID 2
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
+---> junior-test-storage-01-prod
+openstack enabled
+Creating start/stop scripts for junior-test-storage-01-prod on OpenStack
+OpenStack:  got flavor ID 2
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
+---> junior-test-virtual-desktop-01-prod
+openstack enabled
+Creating start/stop scripts for junior-test-virtual-desktop-01-prod on OpenStack
+OpenStack:  got flavor ID 2
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
++---> PROJECT junior-test FINISHED 
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | scheduling                                         |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | oPrR5meXTiTw                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-16T12:29:45Z                               |
+| flavor                               | m1.small (2)                                       |
+| hostId                               |                                                    |
+| id                                   | 7dc4a287-04b4-43a5-a5bf-725a8a675f58               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | junior-test-mongodb-01-prod.junior-test            |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-16T12:29:44Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | scheduling                                         |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | BE7ww97n3J6K                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-16T12:29:48Z                               |
+| flavor                               | m1.small (2)                                       |
+| hostId                               |                                                    |
+| id                                   | 2f16bab0-1480-41f7-a3ac-50702ce80e7b               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | junior-test-storage-01-prod.junior-test            |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-16T12:29:48Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | scheduling                                         |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | yoW2ujXnsaBc                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-16T12:29:52Z                               |
+| flavor                               | m1.small (2)                                       |
+| hostId                               |                                                    |
+| id                                   | c2370bdb-64d2-42d7-9293-4b7c703750d8               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | junior-test-virtual-desktop-01-prod.junior-test    |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-16T12:29:52Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
+This will execute the following _SIGN_ commands:
+puppet cert sign junior-test-mongodb-01-prod.openstacklocal
+puppet cert sign junior-test-storage-01-prod.openstacklocal
+puppet cert sign junior-test-virtual-desktop-01-prod.openstacklocal
+[mNotice: Signed certificate request for junior-test-mongodb-01-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest junior-test-mongodb-01-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/junior-test-mongodb-01-prod.openstacklocal.pem'[0m
+[mNotice: Signed certificate request for junior-test-storage-01-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest junior-test-storage-01-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/junior-test-storage-01-prod.openstacklocal.pem'[0m
+[mNotice: Signed certificate request for junior-test-virtual-desktop-01-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest junior-test-virtual-desktop-01-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/junior-test-virtual-desktop-01-prod.openstacklocal.pem'[0m
+Configuring backup of servers in the project

@@ -1,0 +1,12 @@
+class sensu_client {
+        package { "git" :
+                ensure => present,
+        }
+        file { "/etc/sensu-client.pp":
+                ensure => present,
+                owner => 'root',
+                group => 'root',
+                mode => 0600,
+                source => "puppet:///modules/sensu_client/sensu-client.pp",
+        }
+}

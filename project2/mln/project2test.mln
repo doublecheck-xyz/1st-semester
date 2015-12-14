@@ -1,0 +1,43 @@
+global {
+        project project2test
+}
+
+superclass common {
+        openstack {
+                image Ubuntu14.04
+                flavor m1.medium
+                keypair master
+        user_data {
+
+            wget 10.1.0.27/puppet_install.sh
+            sudo sh puppet_install.sh
+            wget 10.1.0.27/puppet_agent.pp
+            sudo puppet apply puppet_agent.pp
+        }
+        }
+        network eth0 {
+                net nsa_master_net
+                address dhcp
+        }
+}
+
+host project2test-virtual-desktop-01-prod {
+    superclass common
+}
+host project2test-virtual-desktop-02-prod {
+    superclass common
+}
+host project2test-virtual-desktop-03-prod {
+    superclass common
+}
+host project2test-virtual-desktop-04-prod {
+    superclass common
+}
+host project2test-storage-01-prod {
+    superclass common
+}
+host project2test-mongodb-01-prod {
+    superclass common
+}
+
+

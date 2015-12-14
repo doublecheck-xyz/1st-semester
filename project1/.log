@@ -1,0 +1,17 @@
+This will execute the following _CLEAN_ commands:
+puppet cert clean aabb-loadbalancer-01-prod.openstacklocal
+puppet cert clean aabb-mysql-01-prod.openstacklocal
+[mNotice: Revoked certificate with serial 67[0m
+[mNotice: Removing file Puppet::SSL::Certificate aabb-loadbalancer-01-prod.openstacklocal at '/var/lib/puppet/ssl/ca/signed/aabb-loadbalancer-01-prod.openstacklocal.pem'[0m
+[mNotice: Removing file Puppet::SSL::Certificate aabb-loadbalancer-01-prod.openstacklocal at '/var/lib/puppet/ssl/certs/aabb-loadbalancer-01-prod.openstacklocal.pem'[0m
+[mNotice: Revoked certificate with serial 68[0m
+[mNotice: Removing file Puppet::SSL::Certificate aabb-mysql-01-prod.openstacklocal at '/var/lib/puppet/ssl/ca/signed/aabb-mysql-01-prod.openstacklocal.pem'[0m
+[mNotice: Removing file Puppet::SSL::Certificate aabb-mysql-01-prod.openstacklocal at '/var/lib/puppet/ssl/certs/aabb-mysql-01-prod.openstacklocal.pem'[0m
+Stopping aabb
+Stopping aabb-mysql-01-prod.aabb
+Stopping aabb-loadbalancer-01-prod.aabb
+
+Are you sure you want to remove aabb? (y/N)
+Removing /opt/mln/projects/root/aabb
+OpenStack:  host is up, will not delete it
+OpenStack:  host is up, will not delete it

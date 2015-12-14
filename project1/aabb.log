@@ -1,0 +1,102 @@
++---> BUILDING aabb
+++ printing Superclasses ++
+--> Superclass common
+common: template = Debian-4.0.ext3
+printing network
+common: Network interfaces
+Interface eth0
+ address: dhcp
+++ printing Hosts ++
+--> Host aabb-loadbalancer-01-prod
+aabb-loadbalancer-01-prod: superclass = 'common'
+aabb-loadbalancer-01-prod: template = Debian-4.0.ext3
+printing network
+aabb-loadbalancer-01-prod: Network interfaces
+Interface eth0
+ address: dhcp
+--> Host aabb-mysql-01-prod
+aabb-mysql-01-prod: superclass = 'common'
+aabb-mysql-01-prod: template = Debian-4.0.ext3
+printing network
+aabb-mysql-01-prod: Network interfaces
+Interface eth0
+ address: dhcp
+Saving Config file: /opt/mln/projects/root/aabb/aabb.mln
+---> aabb-loadbalancer-01-prod
+openstack enabled
+Creating start/stop scripts for aabb-loadbalancer-01-prod on OpenStack
+OpenStack:  got flavor ID 2
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
+---> aabb-mysql-01-prod
+openstack enabled
+Creating start/stop scripts for aabb-mysql-01-prod on OpenStack
+OpenStack:  got flavor ID 2
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
++---> PROJECT aabb FINISHED 
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | -                                                  |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | 9L7UnKdXDmcy                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-12T12:06:03Z                               |
+| flavor                               | m1.small (2)                                       |
+| hostId                               |                                                    |
+| id                                   | 5413b80e-2550-4f23-b655-36a8c58b345b               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | aabb-loadbalancer-01-prod.aabb                     |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-12T12:06:03Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | scheduling                                         |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | D9yjXpxujxJ6                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-12T12:06:07Z                               |
+| flavor                               | m1.small (2)                                       |
+| hostId                               |                                                    |
+| id                                   | ecc718ad-7754-404b-8b44-9ddaf909f13c               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | aabb-mysql-01-prod.aabb                            |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-12T12:06:07Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
+This will execute the following _SIGN_ commands:
+puppet cert sign aabb-loadbalancer-01-prod.openstacklocal
+puppet cert sign aabb-mysql-01-prod.openstacklocal
+[mNotice: Signed certificate request for aabb-loadbalancer-01-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest aabb-loadbalancer-01-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/aabb-loadbalancer-01-prod.openstacklocal.pem'[0m
+[mNotice: Signed certificate request for aabb-mysql-01-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest aabb-mysql-01-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/aabb-mysql-01-prod.openstacklocal.pem'[0m

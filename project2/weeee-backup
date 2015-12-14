@@ -1,0 +1,2 @@
+#!/bin/sh\n/usr/bin/pull_backup.pl -c /home/ubuntu/weeee_backup.conf
+#!/bin/sh\n/usr/bin/pull_backup.pl -c /home/ubuntu/weeee_backup.conf

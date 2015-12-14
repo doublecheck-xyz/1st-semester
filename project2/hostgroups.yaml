@@ -1,0 +1,14 @@
+:default_hostgroup:
+  :facts_map:
+    "servers/loadbalancer":
+      "hostname": "loadbalancer"
+    "servers/apache-php":
+      "hostname": "apache-php"
+    "servers/mysql":
+      "hostname": "mysql"
+    "servers/node-js":
+      "hostname": "node-js"
+    "servers/memcache":
+      "hostname": "memcache"
+    "servers":
+      "hostname": ".*"

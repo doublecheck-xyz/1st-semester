@@ -1,0 +1,102 @@
++---> BUILDING heyyou
+++ printing Superclasses ++
+--> Superclass common
+common: template = Debian-4.0.ext3
+printing network
+common: Network interfaces
+Interface eth0
+ address: dhcp
+++ printing Hosts ++
+--> Host heyyou-loadbalancer-01-prod
+heyyou-loadbalancer-01-prod: superclass = 'common'
+heyyou-loadbalancer-01-prod: template = Debian-4.0.ext3
+printing network
+heyyou-loadbalancer-01-prod: Network interfaces
+Interface eth0
+ address: dhcp
+--> Host heyyou-mysql-01-prod
+heyyou-mysql-01-prod: superclass = 'common'
+heyyou-mysql-01-prod: template = Debian-4.0.ext3
+printing network
+heyyou-mysql-01-prod: Network interfaces
+Interface eth0
+ address: dhcp
+Saving Config file: /opt/mln/projects/root/heyyou/heyyou.mln
+---> heyyou-loadbalancer-01-prod
+openstack enabled
+Creating start/stop scripts for heyyou-loadbalancer-01-prod on OpenStack
+OpenStack:  got flavor ID 2
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
+---> heyyou-mysql-01-prod
+openstack enabled
+Creating start/stop scripts for heyyou-mysql-01-prod on OpenStack
+OpenStack:  got flavor ID 2
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
++---> PROJECT heyyou FINISHED 
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | scheduling                                         |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | LcqAvziFawm4                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-10T13:49:31Z                               |
+| flavor                               | m1.small (2)                                       |
+| hostId                               |                                                    |
+| id                                   | 5e08eee4-adc2-4650-be5a-6ddc3f3f2ce9               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | heyyou-loadbalancer-01-prod.heyyou                 |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-10T13:49:31Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | scheduling                                         |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | KCkufbnpqu9U                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-10T13:49:35Z                               |
+| flavor                               | m1.small (2)                                       |
+| hostId                               |                                                    |
+| id                                   | 35143e09-360b-47c4-a015-1bc3e2388615               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | heyyou-mysql-01-prod.heyyou                        |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-10T13:49:34Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
+This will execute the following _SIGN_ commands:
+puppet cert sign heyyou-loadbalancer-01-prod.openstacklocal
+puppet cert sign heyyou-mysql-01-prod.openstacklocal
+[mNotice: Signed certificate request for heyyou-loadbalancer-01-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest heyyou-loadbalancer-01-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/heyyou-loadbalancer-01-prod.openstacklocal.pem'[0m
+[mNotice: Signed certificate request for heyyou-mysql-01-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest heyyou-mysql-01-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/heyyou-mysql-01-prod.openstacklocal.pem'[0m

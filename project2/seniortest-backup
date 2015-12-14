@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/bin/pull_backup.pl -c /home/ubuntu/seniortest_backup.conf

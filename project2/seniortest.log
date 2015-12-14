@@ -1,0 +1,283 @@
++---> BUILDING seniortest
+++ printing Superclasses ++
+--> Superclass common
+common: template = Debian-4.0.ext3
+printing network
+common: Network interfaces
+Interface eth0
+ address: dhcp
+++ printing Hosts ++
+--> Host seniortest-virtual-desktop-03-prod
+seniortest-virtual-desktop-03-prod: superclass = 'common'
+seniortest-virtual-desktop-03-prod: template = Debian-4.0.ext3
+printing network
+seniortest-virtual-desktop-03-prod: Network interfaces
+Interface eth0
+ address: dhcp
+--> Host seniortest-mongodb-01-prod
+seniortest-mongodb-01-prod: superclass = 'common'
+seniortest-mongodb-01-prod: template = Debian-4.0.ext3
+printing network
+seniortest-mongodb-01-prod: Network interfaces
+Interface eth0
+ address: dhcp
+--> Host seniortest-virtual-desktop-02-prod
+seniortest-virtual-desktop-02-prod: superclass = 'common'
+seniortest-virtual-desktop-02-prod: template = Debian-4.0.ext3
+printing network
+seniortest-virtual-desktop-02-prod: Network interfaces
+Interface eth0
+ address: dhcp
+--> Host seniortest-storage-01-prod
+seniortest-storage-01-prod: superclass = 'common'
+seniortest-storage-01-prod: template = Debian-4.0.ext3
+printing network
+seniortest-storage-01-prod: Network interfaces
+Interface eth0
+ address: dhcp
+--> Host seniortest-virtual-desktop-04-prod
+seniortest-virtual-desktop-04-prod: superclass = 'common'
+seniortest-virtual-desktop-04-prod: template = Debian-4.0.ext3
+printing network
+seniortest-virtual-desktop-04-prod: Network interfaces
+Interface eth0
+ address: dhcp
+--> Host seniortest-virtual-desktop-01-prod
+seniortest-virtual-desktop-01-prod: superclass = 'common'
+seniortest-virtual-desktop-01-prod: template = Debian-4.0.ext3
+printing network
+seniortest-virtual-desktop-01-prod: Network interfaces
+Interface eth0
+ address: dhcp
+Saving Config file: /opt/mln/projects/root/seniortest/seniortest.mln
+---> seniortest-virtual-desktop-03-prod
+openstack enabled
+Creating start/stop scripts for seniortest-virtual-desktop-03-prod on OpenStack
+OpenStack:  got flavor ID 3
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
+---> seniortest-mongodb-01-prod
+openstack enabled
+Creating start/stop scripts for seniortest-mongodb-01-prod on OpenStack
+OpenStack:  got flavor ID 3
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
+---> seniortest-virtual-desktop-02-prod
+openstack enabled
+Creating start/stop scripts for seniortest-virtual-desktop-02-prod on OpenStack
+OpenStack:  got flavor ID 3
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
+---> seniortest-storage-01-prod
+openstack enabled
+Creating start/stop scripts for seniortest-storage-01-prod on OpenStack
+OpenStack:  got flavor ID 3
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
+---> seniortest-virtual-desktop-04-prod
+openstack enabled
+Creating start/stop scripts for seniortest-virtual-desktop-04-prod on OpenStack
+OpenStack:  got flavor ID 3
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
+---> seniortest-virtual-desktop-01-prod
+openstack enabled
+Creating start/stop scripts for seniortest-virtual-desktop-01-prod on OpenStack
+OpenStack:  got flavor ID 3
+OpenStack:  got image ID b9bbb853-41b5-4175-845b-ffd97aa16fe4
++---> PROJECT seniortest FINISHED 
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | scheduling                                         |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | ax2nopk68SwZ                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-17T10:17:23Z                               |
+| flavor                               | m1.medium (3)                                      |
+| hostId                               |                                                    |
+| id                                   | 4c828bae-ee9b-46be-a216-69b2059d30fe               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | seniortest-mongodb-01-prod.seniortest              |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-17T10:17:23Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | scheduling                                         |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | Mr72NLHBqX6Z                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-17T10:17:27Z                               |
+| flavor                               | m1.medium (3)                                      |
+| hostId                               |                                                    |
+| id                                   | f037e9b0-f725-46ab-90db-6a233f7e2a44               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | seniortest-storage-01-prod.seniortest              |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-17T10:17:27Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | scheduling                                         |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | wTX9CJLmT6c4                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-17T10:17:30Z                               |
+| flavor                               | m1.medium (3)                                      |
+| hostId                               |                                                    |
+| id                                   | 576cc442-255d-46e0-a1c7-6f7129ebb956               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | seniortest-virtual-desktop-01-prod.seniortest      |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-17T10:17:30Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | scheduling                                         |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | k49pSN2iKsUb                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-17T10:17:34Z                               |
+| flavor                               | m1.medium (3)                                      |
+| hostId                               |                                                    |
+| id                                   | ffd49ee8-a729-4fae-b162-9592b71c38c0               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | seniortest-virtual-desktop-02-prod.seniortest      |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-17T10:17:34Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | scheduling                                         |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | NcVTKd3nttZr                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-17T10:17:38Z                               |
+| flavor                               | m1.medium (3)                                      |
+| hostId                               |                                                    |
+| id                                   | 52cd78cb-4c1c-49d6-816d-8201b5110a63               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | seniortest-virtual-desktop-03-prod.seniortest      |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-17T10:17:38Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
++--------------------------------------+----------------------------------------------------+
+| Property                             | Value                                              |
++--------------------------------------+----------------------------------------------------+
+| OS-DCF:diskConfig                    | MANUAL                                             |
+| OS-EXT-AZ:availability_zone          | nova                                               |
+| OS-EXT-STS:power_state               | 0                                                  |
+| OS-EXT-STS:task_state                | scheduling                                         |
+| OS-EXT-STS:vm_state                  | building                                           |
+| OS-SRV-USG:launched_at               | -                                                  |
+| OS-SRV-USG:terminated_at             | -                                                  |
+| accessIPv4                           |                                                    |
+| accessIPv6                           |                                                    |
+| adminPass                            | vFyNTtmSQ37T                                       |
+| config_drive                         |                                                    |
+| created                              | 2015-11-17T10:17:42Z                               |
+| flavor                               | m1.medium (3)                                      |
+| hostId                               |                                                    |
+| id                                   | 6d10f93b-29f9-4f98-b45e-30442c1f95b9               |
+| image                                | Ubuntu14.04 (b9bbb853-41b5-4175-845b-ffd97aa16fe4) |
+| key_name                             | master                                             |
+| metadata                             | {}                                                 |
+| name                                 | seniortest-virtual-desktop-04-prod.seniortest      |
+| os-extended-volumes:volumes_attached | []                                                 |
+| progress                             | 0                                                  |
+| security_groups                      | default                                            |
+| status                               | BUILD                                              |
+| tenant_id                            | 1f92d2be8409442997b1e9cb52c3ef2b                   |
+| updated                              | 2015-11-17T10:17:42Z                               |
+| user_id                              | 097dafb6cfbb439189015e33bdc85469                   |
++--------------------------------------+----------------------------------------------------+
+This will execute the following _SIGN_ commands:
+puppet cert sign seniortest-mongodb-01-prod.openstacklocal
+puppet cert sign seniortest-storage-01-prod.openstacklocal
+puppet cert sign seniortest-virtual-desktop-01-prod.openstacklocal
+puppet cert sign seniortest-virtual-desktop-02-prod.openstacklocal
+puppet cert sign seniortest-virtual-desktop-03-prod.openstacklocal
+puppet cert sign seniortest-virtual-desktop-04-prod.openstacklocal
+[mNotice: Signed certificate request for seniortest-mongodb-01-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest seniortest-mongodb-01-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/seniortest-mongodb-01-prod.openstacklocal.pem'[0m
+[mNotice: Signed certificate request for seniortest-storage-01-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest seniortest-storage-01-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/seniortest-storage-01-prod.openstacklocal.pem'[0m
+[mNotice: Signed certificate request for seniortest-virtual-desktop-01-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest seniortest-virtual-desktop-01-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/seniortest-virtual-desktop-01-prod.openstacklocal.pem'[0m
+[mNotice: Signed certificate request for seniortest-virtual-desktop-02-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest seniortest-virtual-desktop-02-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/seniortest-virtual-desktop-02-prod.openstacklocal.pem'[0m
+[mNotice: Signed certificate request for seniortest-virtual-desktop-03-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest seniortest-virtual-desktop-03-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/seniortest-virtual-desktop-03-prod.openstacklocal.pem'[0m
+[mNotice: Signed certificate request for seniortest-virtual-desktop-04-prod.openstacklocal[0m
+[mNotice: Removing file Puppet::SSL::CertificateRequest seniortest-virtual-desktop-04-prod.openstacklocal at '/var/lib/puppet/ssl/ca/requests/seniortest-virtual-desktop-04-prod.openstacklocal.pem'[0m
+Configuring backup of servers in the project
